@@ -27,6 +27,9 @@ class ListItem extends React.Component{
 	//	e.preventDefault;
 	}
 	
+	handleClick(e){
+		
+	}
 	
 	render(){
 		return(
@@ -41,11 +44,21 @@ class ListItem extends React.Component{
 	}
 }
 
+function Item(props){
+	return(
+		<div>
+		<p>{props.name}</p>
+		<button onClick={props.handleClick}>X</button>
+		</div>
+	);
+}
+
 function App() {
   return (
     <div>
       <h1>Item list</h1>
       <ListItem/>
+      <Item name="papper"/>
     </div>
   );
 }
